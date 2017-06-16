@@ -1,11 +1,11 @@
 import React from 'react'
+import { childrenWithProps } from '../utils/utilsReact.js'
 
 export default props => (
   <div>
     <h1>Familia</h1>
-    { React.cloneElement(props.children, {...props}) }
-
-    {/*esse metodo para passar atributos para os filhos funciona apenas para um elemento*/}
+    { childrenWithProps(props.childre, props) }
+    {/*está é a melhor solução, pois permite renderizar mais de um elemento*/}
     
   </div>
 )
